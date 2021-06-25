@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <title>{% block title %} HelloEinoc {% endblock %}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="keywords" content="" />
+          <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+          <link href="{{ url_for('static', filename = 'assets/css/bootstrap.css') }}" type="text/css" rel="stylesheet" media="all">
+          <link href="{{ url_for('static', filename = 'assets/css/style.css') }}" type="text/css" rel="stylesheet" media="all">
+          <link href="{{ url_for('static', filename = 'assets/css/font-awesome.css') }}" rel="stylesheet">
+
+          <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+          <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<main>
+  	<!-- banner -->
+	<div class="agileits-banner about-w3lsbnr">
+		<div class="bnr-agileinfo">
+			<!-- navigation -->
+			<div class="top-nav w3-agiletop">
+				<div class="container">
+					<div class="navbar-header w3llogo">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="/home"><img src="{{ url_for('static', filename = 'assets/images/cugg1.png') }}" width="140px" height="80px"></a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div class="w3menu navbar-right">
+							<ul class="nav navbar">
+                                <li><a href="/home" class="active">Home</a></li>
+								<li><a href="/cloudresource">Cloud Resource</a></li>
+								<!--<li><a href="gallery.html">IP Team</a></li>-->
+                                <li><a href="/noc">Noc</a></li>
+                                <!--<li><a href="gallery.html">Voice Team</a></li>-->
+                                <!--<li><a href="gallery.html">Mobile Team</a></li>-->
+                                <li><a href="/idc">IDC</a></li>
+								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Other Teams</span><span class="caret"></span></a>
+									<ul class="dropdown-menu">
+                                        <li><a href="/ipteam">IP Team</a></li>
+										<li><a href="/voiceteam">Voice Team</a></li>
+                                        <li><a href="/mobileteam">Mobile Team</a></li>
+									</ul>
+								</li>
+								<li><a href="/about">About</a></li>
+								<!--<li><a href="index.html">Home</a></li>
+								<li><a href="abouts.html">About</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Pages</span><span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="icons.html">Web Icons</a></li>
+										<li><a href="codes.html" class="active">Short Codes</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>-->
+							</ul>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!-- //navigation -->
+			<!-- banner-text -->
+			<div class="banner-w3text about-w3lsbnr-text">
+				<div class="container">
+					<h2>Welcome to {% block title2 %} Cloud Resource Team {% endblock %}</h2>
+				</div>
+			</div>
+			<!-- //banner-text -->
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- short codes -->
+	<div class="codes">
+		<div class="container">
+			<h3 class="agileits-title">Please Click the hyperlink to enter your website</h3>
+			<div class="grid_3 grid_4">
+				<!--<h3 class="w3ls-hdg">List</h3>-->
+              {% block content %}{% endblock %}
+
+</main>
+</body>
+</html>
